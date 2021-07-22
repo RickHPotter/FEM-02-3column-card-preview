@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+    --primary-colour: hsl(31, 77%, 52%);
+    --secondary-colour: hsl(184, 100%, 22%);
+    --secondary-colour-darker: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --everlight-grey: hsl(0, 0%, 95%);
+}
+
+body {
+    background-color: var(--everlight-grey);
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+}
+
+h1 { font-family: 'Big Shoulders Display'; font-weight: bolder; font-size: large;}
+
+h2 { font-size: 15px; font-weight: lighter; margin-top: -.6em; }
+
+.col {
+    color: var(--transparent-white);
+    margin: 3em .6em;
+    
+    .col-un { 
+        background: var(--primary-colour); 
+        padding: 26px;
+        button { color: var(--primary-colour); justify-self: left;}
+        display: grid;
+    }
+
+    .col-deux { 
+        background: var(--secondary-colour); 
+        padding: 26px;
+        button { color: var(--secondary-colour); justify-self: left;}
+        display: grid;
+    }
+
+    .col-trois { 
+        background: var(--secondary-colour-darker); 
+        padding: 26px;
+        button { color: var(--secondary-colour-darker); justify-self: left;}
+        display: grid;
+    }
+}
+
+button {
+    background-color: var(--everlight-grey);
+    border: 3px solid var(--everlight-grey);
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+
+    //border: 3px solid var(--everlight-grey);
+    border-radius: 16px;
+
+    &:hover {
+        background: transparent;
+        color: var(--everlight-grey)!important;  
+    }
+}
+
+@media only screen and (min-width: 987px) {
+    .col {
+        display: grid;
+        margin: 2em 12em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
